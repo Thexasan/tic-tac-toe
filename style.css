@@ -11,10 +11,11 @@ body {
   display: grid;
   grid-template-columns: 100px 100px 100px;
   grid-template-rows: 100px 100px 100px;
+  position: relative;
 }
 
 .tile {
-  color: #FFFF;
+  color: #ffff;
   font-size: 2em;
   cursor: pointer;
   display: flex;
@@ -26,10 +27,114 @@ h1 {
   color: greenyellow;
 }
 
+.strike {
+  position: absolute;
+  background-color: darkred;
+}
+
+.strike-row-1 {
+  width: 100%;
+  height: 4px;
+  top: 15%;
+}
+
+.strike-row-2 {
+  width: 100%;
+  height: 4px;
+  top: 48%;
+}
+
+.strike-row-3 {
+  width: 100%;
+  height: 4px;
+  top: 83%;
+}
+
+.strike-column-1 {
+  height: 100%;
+  width: 4px;
+  left: 15%;
+}
+
+.strike-column-2 {
+  height: 100%;
+  width: 4px;
+  left: 48%;
+}
+
+.strike-column-1 {
+  height: 100%;
+  width: 4px;
+  left: 83%;
+}
+
+.strike-diagonal-1 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(45deg);
+}
+
+.strike-diagonal-2 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(-45deg);
+}
+
 .right-border {
   border-right: 0.2em solid #000;
 }
 
 .bottom-border {
   border-bottom: 0.2em solid #000;
+}
+
+#game-over-area {
+  text-align: center;
+  border: #000 5px solid;
+  padding: 50px;
+  width: 50%;
+  margin-top: 50px;
+  background-color: rgba(227, 222, 222, 0.315);
+}
+
+h2 {
+  color: #ffff;
+  font-size: 2em;
+  margin-top: 0px;
+}
+
+button {
+  background-color: transparent;
+  color: #ffff;
+  border: 2px solid greenyellow;
+  padding: 10px 30px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 150px;
+  height: 50px;
+  gap: 20px;
+  box-shadow: 2px 3px 6px, -1px -2px 3px;
+}
+
+button:hover {
+  background-color: aqua;
+}
+button:active {
+  background-color: darkgray;
+  transform: scale(90%);
+}
+
+.hidden {
+  display:none;
+}
+
+.visible {
+  display: block;
 }
