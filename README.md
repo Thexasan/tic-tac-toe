@@ -1,3 +1,3 @@
 # Tic Tac Toe
-![alt text]()
+![alt text](tic.png)
 

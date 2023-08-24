@@ -104,3 +104,4 @@ const winningCombinations = [
   { combo: [1, 5, 9], strikeClass: "strike-diagonal-1" },
   { combo: [3, 5, 7], strikeClass: "strike-diagonal-2" },
 ];
+
