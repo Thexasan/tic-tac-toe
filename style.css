@@ -2,29 +2,32 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(to bottom, gray, gray);
-  background-repeat: no-repeat;
-  height: 100vh;
+  background-color: gray;
+  color: #FFFF;
 }
 
 #board {
   display: grid;
   grid-template-columns: 100px 100px 100px;
   grid-template-rows: 100px 100px 100px;
+  cursor: pointer;
   position: relative;
 }
 
 .tile {
-  color: #ffff;
+  color: currentColor;
   font-size: 2em;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-h1 {
-  color: greenyellow;
+.right-border {
+  border-right: 0.2em solid #000;
+}
+
+.bottom-border {
+  border-bottom: 0.2em solid #000;
 }
 
 .strike {
@@ -37,37 +40,31 @@ h1 {
   height: 4px;
   top: 15%;
 }
-
 .strike-row-2 {
   width: 100%;
   height: 4px;
   top: 48%;
 }
-
 .strike-row-3 {
   width: 100%;
   height: 4px;
   top: 83%;
 }
-
 .strike-column-1 {
   height: 100%;
   width: 4px;
   left: 15%;
 }
-
 .strike-column-2 {
   height: 100%;
   width: 4px;
   left: 48%;
 }
-
-.strike-column-1 {
+.strike-column-3 {
   height: 100%;
   width: 4px;
   left: 83%;
 }
-
 .strike-diagonal-1 {
   width: 90%;
   height: 4px;
@@ -75,7 +72,6 @@ h1 {
   left: 5%;
   transform: skewY(45deg);
 }
-
 .strike-diagonal-2 {
   width: 90%;
   height: 4px;
@@ -84,57 +80,48 @@ h1 {
   transform: skewY(-45deg);
 }
 
-.right-border {
-  border-right: 0.2em solid #000;
-}
-
-.bottom-border {
-  border-bottom: 0.2em solid #000;
+h1 {
+  color: currentColor;
 }
 
 #game-over-area {
   text-align: center;
-  border: #000 5px solid;
+  border: #ffff 5px solid;
   padding: 50px;
   width: 50%;
+  box-shadow: 4px 5px 10px blue,-2px -3px 10px darkblue;
   margin-top: 50px;
-  background-color: rgba(227, 222, 222, 0.315);
 }
 
 h2 {
-  color: #ffff;
+  color: currentColor;
   font-size: 2em;
   margin-top: 0px;
 }
 
 button {
-  background-color: transparent;
-  color: #ffff;
-  border: 2px solid greenyellow;
-  padding: 10px 30px;
-  font-size: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  width: 150px;
-  height: 50px;
-  gap: 20px;
-  box-shadow: 2px 3px 6px, -1px -2px 3px;
+  background-color: green;
+  border-radius: 10px;
+  color: currentColor;
+  border: greenyellow 1px solid;
+  padding: 10px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+  font-size: 1.5em;
 }
-
-button:hover {
-  background-color: aqua;
-}
-button:active {
-  background-color: darkgray;
+button:active{
   transform: scale(90%);
 }
 
+button:hover{
+  background-color: transparent;
+  color: #ffff;
+}
+
 .hidden {
-  display:none;
+  display: none;
 }
 
 .visible {
   display: block;
 }
+
